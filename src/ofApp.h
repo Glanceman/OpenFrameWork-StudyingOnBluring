@@ -28,9 +28,18 @@ class ofApp : public ofBaseApp{
 		void mouseExited(int x, int y);
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
+		Mat gaussianFilter(Mat img, int size, double sigma);
+
+		Mat boxFilter(Mat img, int size);
+
+		Mat medianFilter(Mat img, int size);
+
 		void gotMessage(ofMessage msg);
 
 		ofImage img1;
 		ofImage img2;
+
+		Mat imgMat1;
+		Mat imgMat2;
 		
 };
